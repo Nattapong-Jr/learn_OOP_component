@@ -1,0 +1,1 @@
+print("Initializing product_catalog package...")
