@@ -1,6 +1,6 @@
 from product_catalog.service import ProductService
 from order_processing.service import OrderService
-from user_management.moduels import User
+from user_management.modules import User
 
 def run_application():
     print("--- starting E-commerce Application ---")
