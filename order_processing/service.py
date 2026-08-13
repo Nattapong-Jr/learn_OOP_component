@@ -1,4 +1,4 @@
-from order_processing import Order
+from order_processing.moduels import Order
 
 class OrderService:
     def __init__(self,product_service):
@@ -23,9 +23,9 @@ class OrderService:
 
         order_id = f"ORD{self.next_order_id:03d}"
         order = Order(order_id,customer_id,processed_items,total_amount, "processed")
-        self.order[order_id]
+        self.order[order_id] = order
         self.next_order_id += 1
         print(f"Oder {order_id} created successfully for customer {customer_id}. Total: $ {total_amount:.2f}")
         return order 
     def get_order(self,order_id):
-        return self.orders.get(order_id)
+        return self.order.get(order_id)

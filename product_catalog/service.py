@@ -10,7 +10,7 @@ class ProductService:
         }
 
     def get_product(self,product_id):
-        return self,self.products.get(product_id)
+        return self.products.get(product_id)
 
     def update_product_stock(self,product_id,quantity):
         product = self.get_product(product_id)
